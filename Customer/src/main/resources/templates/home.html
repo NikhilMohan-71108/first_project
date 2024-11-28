@@ -101,8 +101,10 @@
 
                                     </div>
                                 </div>
-                                <div class="product-content-wrap" th:each="category :${categories}" th:if="${category.name == product.category.name}">
-                                    <div class="product-category" >
+                                <div class="product-content-wrap" th:each="category : ${categories}"
+                                     th:if="${category != null and product.category != null and category.name == product.category.name}">
+
+                                <div class="product-category" >
                                         <a href="shop-grid-right.html" th:text="${category.name}"></a>
                                     </div>
                                     <h2><a href="shop-product-right.html" th:text="${product.name}"></a></h2>

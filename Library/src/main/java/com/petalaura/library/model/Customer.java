@@ -42,6 +42,7 @@ public class Customer {
     private List<ShoppingCart> cart;
 
     @OneToMany(mappedBy = "customer")
+    @ToString.Exclude
     private List<Order> orders;
 
 

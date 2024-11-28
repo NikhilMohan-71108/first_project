@@ -172,8 +172,8 @@
                         </div>
                     </div>
                     <div class="row product-grid-3">
-                        <div class="col-lg-3 col-md-4"  th:each="product :${products}" th:if="${!product.category.deleted }">
-                            <th:block th:if="${!product.category.deleted}">
+                        <div class="col-lg-3 col-md-4"  th:each="product :${products}">
+                            <th:block th:if="${product.category != null and !product.category.deleted}">
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
